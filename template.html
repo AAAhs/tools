@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>vue + element-ui 单页面模板</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.bootcss.com/element-ui/1.2.9/theme-default/index.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/vue/2.2.6/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/element-ui/1.2.9/index.js"></script>
+    <script src="https://unpkg.com/lodash@4.17.4/lodash.min.js"></script>
+    <style>
+        /* 
+         * css 样式
+         */
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 内容 -->
+        <div>{{ msg }}</div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+                    msg: ''
+                }
+            },
+            computed: {
+
+            },
+            methods: {
+                init() {
+                    this.msg = 'hello world'
+                }
+            },
+            created() {
+                this.init()
+            },
+        });
+    </script>
+</body>
+
+</html>
